@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Rampart One';
-  src: local('Rampart One'), url(./fonts/RampartOne-Regular.ttf) format('ttf');
+  src: local('Rampart One'),
+    url(./fonts/RampartOne-Regular.ttf) format('truetype');
 }
 
 html {
