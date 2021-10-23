@@ -1,10 +1,10 @@
-@font-face {
+/* @font-face {
   font-family: 'Rampart One';
   src: local('Rampart One'),
     url('../src/static/fonts/RampartOne-Regular.ttf') format('truetype');
   font-family: 'Rampart One', cursive;
   font-weight: 400;
-}
+} */
 
 body {
   background-color: black;
