@@ -1,22 +1,18 @@
-@font-face {
+/* @font-face {
   font-family: 'Rampart One';
   src: local('Rampart One'),
     url(./fonts/RampartOne-Regular.ttf) format('truetype');
-}
+} */
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
-}
-
-h1 {
-  font-family: 'Rampart One';
 }
 
 code {
