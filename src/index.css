@@ -1,8 +1,15 @@
-/* @font-face {
+@font-face {
   font-family: 'Rampart One';
   src: local('Rampart One'),
-    url(./fonts/RampartOne-Regular.ttf) format('truetype');
-} */
+    url('./fonts/RampartOne-Regular.ttf') format('truetype');
+  font-family: 'Rampart One', cursive;
+  font-weight: 400;
+}
+
+html {
+  background-color: black;
+  color: white;
+}
 
 body {
   margin: 0;
@@ -11,8 +18,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color: white;
+}
+
+h1 {
+  font-family: 'Rampart One', cursive;
 }
 
 code {
