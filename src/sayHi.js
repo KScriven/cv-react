@@ -4,7 +4,12 @@ class SayHi extends Component {
   render() {
     return (
       <div>
-        SayHi
+        <header>
+          <h1>Component Communications</h1>
+        </header>
+        <main class="main-content">
+          <p>This is a place where I share my contact details</p>
+        </main>
       </div>
     );
   }
