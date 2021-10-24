@@ -11,9 +11,11 @@ import Contact from './contact';
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: `${process.env.REACT_APP_GRAPHQL_ENDPOINT}`,
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
   cache: new InMemoryCache()
 });
+
+console.log(process.env.REACT_APP_GRAPHQL_ENDPOINT);
 
 const history = createBrowserHistory();
 
