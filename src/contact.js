@@ -1,20 +1,13 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import { GET_CONTACT } from './queries'
 
-function Contact() {
-  const { loading, data, error } = useQuery(GET_CONTACT);
-
-  if (loading) return "Loading...";
-
-  if (error) return <pre>{error.message}</pre>
+function Contact(data) {
 
   return (
     <div>
       <header>
         <h2>Component Communications 👄</h2>
       </header>
-      <p>You are welcome to email me at: {data.emailAddress} or if its work related drop me a DM on LinkedIn: {data.linkedIn}</p>
+      <p>You are welcome to email me at: {data.location.state} or if its work related drop me a DM on LinkedIn</p>
     </div>
   );
 }

@@ -1,19 +1,11 @@
 import { gql } from "@apollo/client";
 
-const GET_INTRO = gql`
+const GET_MY_DATA = gql`
   { 
     intro
-  }
-`;
-
-const GET_CONTACT = gql`
-  { 
-    emailAddress 
+    emailAddress
     linkedIn
   }
 `;
 
-export {
-  GET_INTRO,
-  GET_CONTACT,
-}
+export default GET_MY_DATA
