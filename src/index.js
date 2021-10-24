@@ -15,17 +15,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-console.log(process.env.REACT_APP_GRAPHQL_ENDPOINT)
-
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history} >
     <ApolloProvider client={client}>
-      <Route path="/" component={App} />
-      <Route path="/me" component={Me} />
-      <Route path="/see" component={See} />
-      <Route path="/sayhi" component={Contact} />
+      <div>
+        <Route path="/" component={App} />
+        <Route path="/me" component={Me} />
+        <Route path="/see" component={See} />
+        <Route path="/sayhi" component={Contact} />
+      </div>
     </ApolloProvider>
   </Router >,
   document.getElementById('root')

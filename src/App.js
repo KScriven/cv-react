@@ -6,7 +6,6 @@ import GET_MY_DATA from './queries'
 
 function App() {
   const { loading, data, error } = useQuery(GET_MY_DATA);
-  console.log('DATA', data)
 
   if (loading) return "Loading...";
 
@@ -31,9 +30,9 @@ function App() {
           </div>
         </div>
       </main>
-      <footer>
+      {/* <footer>
         <p>Copyright &copy;2021 Kerryn Scriven - You are always one decision away from a totally different life</p>
-      </footer>
+      </footer> */}
     </>
   );
 }
