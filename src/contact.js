@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CONTACT } from './queries'
 
-function SayHi() {
+function Contact() {
   const { loading, data, error } = useQuery(GET_CONTACT);
 
   if (loading) return "Loading...";
@@ -19,4 +19,4 @@ function SayHi() {
   );
 }
 
-export default SayHi;
+export default Contact;

@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class See extends Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <h2>Component Capabilities</h2>
-        </header>
-        <p>This is a place where I share my interests</p>
-      </div>
-    );
-  }
+function See() {
+
+  // const { loading, data, error } = useQuery(GET_INTRO);
+
+  // if (loading) return "Loading...";
+
+  // if (error) return <pre>{error.message}</pre>
+  return (
+    <div>
+      <header>
+        <h2>Component Capabilities</h2>
+      </header>
+      <p>This is a place where I share my interests</p>
+    </div>
+  );
 }
 
 export default See;
