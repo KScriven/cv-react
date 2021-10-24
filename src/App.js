@@ -8,17 +8,24 @@ class App extends Component {
         <header>
           <h1>Hello There</h1>
         </header>
-        <div class="main-content">
-          <p>
-            This is a place where I share my thoughts and gather things from the web
-            that interest me. These are my own thoughts and are not reflective or
-            related to anyone else.
-          </p>
-          <div>
-            <Link to="/me"><button>Me</button></Link>
-            <Link to="/see"><button>See</button></Link>
-            <Link to="/sayhi"><button>Say Hi</button></Link>
+        <main>
+          <div class="main-content">
+            <p>
+              This is a place where I share my thoughts and gather things from the web
+              that interest me. These are my own thoughts and are not reflective or
+              related to anyone else.
+            </p>
+            <div>
+              <Link to="/me"><button>Me</button></Link>
+              <Link to="/see"><button>See</button></Link>
+              <Link to="/sayhi"><button>Say Hi</button></Link>
+            </div>
           </div>
+        </main>
+        <div>
+          <footer>
+            <p>Copyright &copy;2021 Kerryn Scriven - You are always one decision away from a totally different life</p>
+          </footer>
         </div>
       </>
     );

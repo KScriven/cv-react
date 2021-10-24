@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_INTRO } from './queries'
 
-class Me extends Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <h1>Component Type</h1>
-        </header>
-        <main class="main-content">
-          <p>This is a place where I share my stats</p>
-        </main>
-      </div>
-    );
-  }
-}
+function Me() {
+  const { loading, data, error } = useQuery(GET_INTRO);
+
+  if (loading) return "Loading...";
+
+  if (error) return <pre>{error.message}</pre>
+
+  return (
+    <div>
+      <header>
+        <h1>Component Type</h1>
+      </header>
+      <main className="main-content">
+        <p>{data.intro}</p>
+      </main>
+    </div>
+  )
+};
 
 export default Me;
