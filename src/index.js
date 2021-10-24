@@ -15,8 +15,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-console.log(process.env.REACT_APP_GRAPHQL_ENDPOINT);
-
 const history = createBrowserHistory();
 
 ReactDOM.render(
