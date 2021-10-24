@@ -12,11 +12,9 @@ function Me() {
   return (
     <div>
       <header>
-        <h1>Component Type</h1>
+        <h2>Component Type</h2>
       </header>
-      <main className="main-content">
-        <p>{data.intro}</p>
-      </main>
+      <p>{data.intro}</p>
     </div>
   )
 };

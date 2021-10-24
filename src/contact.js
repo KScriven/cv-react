@@ -5,8 +5,6 @@ import { GET_CONTACT } from './queries'
 function SayHi() {
   const { loading, data, error } = useQuery(GET_CONTACT);
 
-  console.log('data', data);
-
   if (loading) return "Loading...";
 
   if (error) return <pre>{error.message}</pre>
@@ -14,13 +12,9 @@ function SayHi() {
   return (
     <div>
       <header>
-        <h1>Component Communications</h1>
+        <h2>Component Communications 👄</h2>
       </header>
-      <main class="main-content">
-        <p>Speak with me</p>
-        <p>{data.emailAddress}</p>
-        <p>{data.linkedIn}</p>
-      </main>
+      <p>You are welcome to email me at: {data.emailAddress} or if its work related drop me a DM on LinkedIn: {data.linkedIn}</p>
     </div>
   );
 }

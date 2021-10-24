@@ -8,14 +8,12 @@ const GET_INTRO = gql`
 
 const GET_CONTACT = gql`
   { 
-    contact {
-      emailAddress,
-      
-    }
+    emailAddress 
+    linkedIn
   }
 `;
 
 export {
   GET_INTRO,
-  GET_CONTACT
+  GET_CONTACT,
 }

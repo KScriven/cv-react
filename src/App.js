@@ -9,7 +9,7 @@ class App extends Component {
           <h1>Hello There</h1>
         </header>
         <main>
-          <div class="main-content">
+          <div className="main-content">
             <p>
               This is a place where I share my thoughts and gather things from the web
               that interest me. These are my own thoughts and are not reflective or
@@ -22,11 +22,9 @@ class App extends Component {
             </div>
           </div>
         </main>
-        <div>
-          <footer>
-            <p>Copyright &copy;2021 Kerryn Scriven - You are always one decision away from a totally different life</p>
-          </footer>
-        </div>
+        <footer>
+          <p>Copyright &copy;2021 Kerryn Scriven - You are always one decision away from a totally different life</p>
+        </footer>
       </>
     );
   }
