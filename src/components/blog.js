@@ -15,6 +15,7 @@ function Blog() {
         <h2>Notes to Self</h2>
       </header>
       <p>ToDo: GraphQL Get some blogs setup here for reading</p>
+      <p>Existing data so far {data}</p>
     </div>
   );
 }
