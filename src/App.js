@@ -1,39 +1,30 @@
 import './App.css';
-import React from 'react';
 import { Link } from "react-router-dom";
+import React from 'react';
 import { useQuery } from '@apollo/client';
-import GET_MY_DATA from './queries'
+import GET_MY_DATA from './queries';
+import Me from './components/me';
+import Contact from './components/contact';
 
 function App() {
   const { loading, data, error } = useQuery(GET_MY_DATA);
-
   if (loading) return "Loading...";
+  if (error) return (<pre>Come back later we are taking a break</pre>);
 
-  if (error) return <pre>{error.message}</pre>
+  console.log('Main data', data)
 
   return (
-    <>
-      <header>
-        <h1>Hello There</h1>
-      </header>
+    <div data-testid="app-testid">
       <main>
-        <div className="main-content">
-          <p>
-            This is a place where I share my thoughts and gather things from the web
-            that interest me. These are my own thoughts and are not reflective or
-            related to anyone else.
-          </p>
-          <div>
-            <Link to={{ pathname: "/me", state: data.intro }}><button>Me</button></Link>
-            <Link to={{ pathname: "/see", state: data.linkedIn }}><button>See</button></Link>
-            <Link to={{ pathname: "/sayhi", state: data.emailAddress }}><button>Say Hi</button></Link>
-          </div>
-        </div>
+        <h1>Hello There</h1>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/me', state: data }}>who am i?</Link></button>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/blog', state: `${data.blog}` }}>blogging</Link></button>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/contact', state: `${data}` }}>contact me</Link></button>
       </main>
-      {/* <footer>
-        <p>Copyright &copy;2021 Kerryn Scriven - You are always one decision away from a totally different life</p>
-      </footer> */}
-    </>
+      <footer>
+        <p>you are always one decision away from a totally different life</p>
+      </footer>
+    </div >
   );
 }
 

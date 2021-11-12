@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import createBrowserHistory from 'history/createBrowserHistory';
-import { Router, Route } from 'react-router-dom'
-import Me from './me';
-import See from './see';
-import Contact from './contact';
+import { Router, Route, Switch } from 'react-router-dom'
+import Blog from './components/blog';
+import Contact from './components/contact';
+import Me from './components/me';
 
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
@@ -21,10 +22,12 @@ ReactDOM.render(
   <Router history={history} >
     <ApolloProvider client={client}>
       <div>
-        <Route path="/" component={App} />
-        <Route path="/me" component={Me} />
-        <Route path="/see" component={See} />
-        <Route path="/sayhi" component={Contact} />
+        <Switch>
+          <Route path="/contact" component={Contact} />
+          <Route path="/me" component={Me} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/" component={App} />
+        </Switch>
       </div>
     </ApolloProvider>
   </Router >,
