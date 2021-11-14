@@ -13,9 +13,9 @@ function App() {
     <div data-testid="app-testid">
       <main>
         <h1>Hello There</h1>
-        <button type='button'><Link className="styledLink" to={{ pathname: '/me', state: data }}>who am i?</Link></button>
-        <button type='button'><Link className="styledLink" to={{ pathname: '/blog', state: `${data.blog}` }}>blogging</Link></button>
-        <button type='button'><Link className="styledLink" to={{ pathname: '/contact', state: `${data}` }}>contact me</Link></button>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/me' }}>who am i?</Link></button>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/blog' }}>blogging</Link></button>
+        <button type='button'><Link className="styledLink" to={{ pathname: '/contact' }}>contact me</Link></button>
       </main>
       <footer>
         <p>you are always one decision away from a totally different life</p>

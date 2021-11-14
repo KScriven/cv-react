@@ -1,22 +1,30 @@
+import React from 'react';
 import Me from '../components/me';
-import "@testing-library/jest-dom/extend-expect";
-import { Link, Router } from "react-router-dom";
-import { createMemoryHistory } from 'history'
-const { screen, cleanup, render } = require('@testing-library/react')
+import GET_MY_DATA from '../queries';
+import { MockedProvider } from '@apollo/client/testing';
+const { render, waitFor } = require('@testing-library/react');
 
-jest.mock('react-router-dom', () => ({
-  useLocation: jest.fn().mockReturnValue({
-    pathname: '/me',
-    search: '',
-    hash: '',
-    state: 'some relevant data',
-    key: '5nvxpbdafa',
-  }),
-}));
+const mockData = [{
+  request: {
+    query: GET_MY_DATA
+  },
+  result: {
+    data: {
+      intro: "software engineer, analogue women in a complex digital world, working and learning to code",
+      emailAddress: "kerryn.lloyd@gmail.com",
+      linkedIn: "https://www.linkedin.com/in/kerrynscriven/"
+    }
+  }
+}];
 
 
-test('Renders the Me component that utilises the react useLocation', () => {
-  render(<Me />);
-  const element = screen.getByTestId('me-testid')
-  expect(element).toHaveTextContent('Component Type')
+test('should render see component', async () => {
+  const { getByTestId } = render(<MockedProvider mocks={mockData}>
+    < Me />
+  </MockedProvider>)
+
+  await waitFor(() => new Promise((res) => setTimeout(res, 0)));
+  const element = getByTestId('me-testid');
+
+  expect(element).toHaveTextContent('Component Specifications')
 })

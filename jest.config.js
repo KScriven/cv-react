@@ -5,5 +5,4 @@ module.exports = {
   },
   moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src'],
   setupFilesAfterEnv: ['<rootDir>/src/jest-setup.js'] // this is the KEY
-  // note it should be in the top level of the exported object.
 };
