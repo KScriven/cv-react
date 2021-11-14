@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import GET_MY_DATA from './queries';
+import Loader from './components/loader'
 
 function App() {
   const { loading, data, error } = useQuery(GET_MY_DATA);
-  if (loading) return "Loading...";
+  if (loading) return <Loader></Loader>;
   if (error) return (<pre>Come back later we are taking a break</pre>);
 
   return (
