@@ -8,4 +8,16 @@ const GET_MY_DATA = gql`
   }
 `;
 
-export default GET_MY_DATA
+const GET_MY_BLOGS = gql`
+  { 
+    intro
+    emailAddress
+    linkedIn
+  }
+`;
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  GET_MY_DATA,
+  GET_MY_BLOGS
+}

@@ -12,7 +12,7 @@ function Contact() {
   return (
     <div data-testid="contact-testid">
       <header>
-        <h2>Component Communications 👄</h2>
+        <h2>Component Communications</h2>
       </header>
       <p>You are welcome to email me at <em>{data.emailAddress}</em></p>
       <p>If its work related drop me a DM on LinkedIn <em>{data.linkedIn}</em></p>
