@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import GET_MY_DATA from '../queries';
+import { GET_MY_DATA } from '../queries';
 
 function Me() {
   const { loading, data, error } = useQuery(GET_MY_DATA);

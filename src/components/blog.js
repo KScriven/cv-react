@@ -1,21 +1,27 @@
 import React from 'react';
-// import { useQuery } from '@apollo/client';
-// import GET_MY_DATA from '../queries';
+import { useQuery } from '@apollo/client';
+import { GET_MY_BLOGS } from '../queries';
 
 function Blog() {
-  // const { loading, data, error } = useQuery(GET_MY_DATA);
+  const { loading, data, error } = useQuery(GET_MY_BLOGS);
 
-  // if (loading) return "Loading...";
+  if (loading) return "Loading...";
 
-  // if (error) return (<pre>Come back later we are taking a break</pre>);
+  if (error) return (<pre>Come back later we are taking a break</pre>);
+
+  console.log(data);
 
   return (
     <div data-testid="blog-testid">
       <header>
-        <h2>Notes to Self</h2>
+        <h2>Welcome to my Blogs to Self</h2>
       </header>
-      <p>ToDo: GraphQL Get some blogs setup here for reading</p>
-
+      <div>
+        {data && data.map((blog, idx) => (
+          <><span key={idx}></span><h3>{blog.intro}</h3></>
+        ))}
+      </div>
+      {/* <p>{data}</p> */}
     </div>
   );
 }

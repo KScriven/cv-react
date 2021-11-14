@@ -9,15 +9,17 @@ const GET_MY_DATA = gql`
 `;
 
 const GET_MY_BLOGS = gql`
-  { 
+  query blogs { 
     intro
-    emailAddress
-    linkedIn
+    myBiggestTakeAways
+    theDailyGrind
+    theThingsILove
+    theThingsIDisLike
+    interestingFacts
   }
 `;
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
+export {
   GET_MY_DATA,
   GET_MY_BLOGS
 }
